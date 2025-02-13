@@ -8,6 +8,16 @@
         "typescript": "^5.3.3",
       },
     },
+    "packages/module": {
+      "name": "@repro/module",
+      "version": "0.0.1",
+      "dependencies": {
+        "@nuxt/kit": "^3.10.3",
+      },
+      "devDependencies": {
+        "typescript": "^5.3.3",
+      },
+    },
     "packages/shared": {
       "name": "@repro/shared",
       "version": "0.0.1",
@@ -18,13 +28,12 @@
     "packages/web": {
       "name": "@repro/web",
       "dependencies": {
+        "@repro/module": "workspace:*",
         "@repro/shared": "workspace:*",
       },
       "devDependencies": {
-        "@nuxt/kit": "^3.10.3",
         "nuxt": "^3.10.3",
         "typescript": "^5.3.3",
-        "vue": "^3.4.19",
       },
     },
   },
@@ -238,6 +247,8 @@
     "@redocly/config": ["@redocly/config@0.20.3", "", {}, "sha512-Nyyv1Bj7GgYwj/l46O0nkH1GTKWbO3Ixe7KFcn021aZipkZd+z8Vlu1BwkhqtVgivcKaClaExtWU/lDHkjBzag=="],
 
     "@redocly/openapi-core": ["@redocly/openapi-core@1.28.5", "", { "dependencies": { "@redocly/ajv": "^8.11.2", "@redocly/config": "^0.20.1", "colorette": "^1.2.0", "https-proxy-agent": "^7.0.5", "js-levenshtein": "^1.1.6", "js-yaml": "^4.1.0", "minimatch": "^5.0.1", "pluralize": "^8.0.0", "yaml-ast-parser": "0.0.43" } }, "sha512-eAuL+x1oBbodJksPm4UpFU57A6z1n1rx9JNpD87CObwtbRf5EzW29Ofd0t057bPGcHc8cYZtZzJ69dcRQ9xGdg=="],
+
+    "@repro/module": ["@repro/module@workspace:packages/module"],
 
     "@repro/shared": ["@repro/shared@workspace:packages/shared"],
 
