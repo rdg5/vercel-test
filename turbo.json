@@ -1,9 +1,11 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env", "**/.env.*local", "bun.lockb"],
   "pipeline": {
     "build": {
+      "cache": false,
       "dependsOn": ["^build"],
-      "outputs": [".nuxt/**", ".output/**", "dist/**"]
+      "outputs": ["dist/**", "build/**", ".output/**", ".vercel/**", ".nuxt/**"]
     },
     "dev": {
       "cache": false,

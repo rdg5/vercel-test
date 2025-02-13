@@ -12,7 +12,8 @@
   "dependencies": {
     "@nuxt/kit": "^3.10.3",
     "@repro/types": "workspace:*",
-    "@repro/helpers": "workspace:*"
+    "@repro/helpers": "workspace:*",
+    "@mdi/font": "^7.4.47"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.5.5",
