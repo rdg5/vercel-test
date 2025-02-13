@@ -1,8 +1,6 @@
 import { defineNuxtModule, addPlugin, createResolver } from "@nuxt/kit";
-
-export interface ModuleOptions {
-  addPlugin?: boolean;
-}
+import type { ModuleOptions } from "@repro/types";
+import { getConfig } from "@repro/helpers";
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -13,7 +11,13 @@ export default defineNuxtModule<ModuleOptions>({
     addPlugin: true,
   },
   setup(options, nuxt) {
+    const config = getConfig();
     const resolver = createResolver(import.meta.url);
+
+    nuxt.options.runtimeConfig.public.asf3 = {
+      version: config.version,
+    };
+
     if (options.addPlugin) {
       addPlugin(resolver.resolve("./runtime/plugin"));
     }

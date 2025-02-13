@@ -16,15 +16,19 @@
   ],
   "scripts": {
     "prepack": "nuxt-module-build build",
-    "postinstall": "nuxt-module-build build --stub && nuxt-module-build prepare",
-    "build": "npx nuxt-module-build build"
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "postinstall": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "build": "nuxt-module-build build"
   },
   "dependencies": {
+    "@repro/helpers": "workspace:*",
+    "@repro/types": "workspace:*",
     "@nuxt/kit": "^3.11.2"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.6.0",
-    "@types/node": "^20.11.24",
+    "@nuxt/schema": "^3.11.2",
     "typescript": "^5.3.3"
   }
 }
