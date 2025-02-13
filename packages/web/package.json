@@ -1,16 +1,18 @@
 {
   "name": "@repro/web",
-  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf dist",
-    "dev": "tsc --watch"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "clean": "rm -rf .nuxt .output"
   },
   "dependencies": {
     "@repro/shared": "workspace:*"
   },
   "devDependencies": {
+    "@nuxt/kit": "^3.10.3",
+    "nuxt": "^3.10.3",
+    "vue": "^3.4.19",
     "typescript": "^5.3.3"
   }
 }
