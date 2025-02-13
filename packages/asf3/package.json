@@ -1,19 +1,29 @@
 {
   "name": "@repro/asf3",
-  "version": "0.0.1",
-  "private": true,
+  "version": "1.0.0",
   "type": "module",
-  "main": "./dist/module.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "nuxt-module-build build",
-    "dev": "nuxt-module-build build --stub && nuxt-module-build prepare"
+    "prepack": "nuxt-module-build build",
+    "postinstall": "nuxt-module-build build --stub && nuxt-module-build prepare",
+    "build": "npx nuxt-module-build build"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.10.3"
+    "@nuxt/kit": "^3.11.2"
   },
   "devDependencies": {
-    "@nuxt/module-builder": "^0.5.5",
+    "@nuxt/module-builder": "^0.6.0",
     "@types/node": "^20.11.24",
     "typescript": "^5.3.3"
   }
