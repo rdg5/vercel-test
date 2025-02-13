@@ -1,0 +1,20 @@
+{
+  "name": "@repro/asf3",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/module.mjs",
+  "types": "./dist/types.d.ts",
+  "scripts": {
+    "build": "nuxt-module-build build",
+    "dev": "nuxt-module-build build --stub && nuxt-module-build prepare"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.10.3"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "^0.5.5",
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}

@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@repro/shared": "workspace:*",
-    "@repro/module": "workspace:*"
+    "@repro/asf3": "workspace:*"
   },
   "devDependencies": {
     "nuxt": "^3.10.3",
