@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Nuxt",
+  "extends": ["./base.json"],
+  "paths": {
+    "*": ["node_modules/*"]
+  },
+  "compilerOptions": {
+    "module": "nodenext",
+    "target": "esnext"
+  }
+}
