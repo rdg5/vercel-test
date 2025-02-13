@@ -1,17 +1,15 @@
 {
   "name": "@repro/web",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
-    "clean": "rm -rf .nuxt .output"
+    "dev": "nuxt dev"
   },
   "dependencies": {
-    "@repro/shared": "workspace:*",
     "@repro/asf3": "workspace:*"
   },
   "devDependencies": {
-    "nuxt": "^3.10.3",
-    "typescript": "^5.3.3"
+    "nuxt": "^3.10.3"
   }
 }
