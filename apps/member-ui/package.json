@@ -1,0 +1,16 @@
+{
+  "name": "member-ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --port 3001"
+  },
+  "dependencies": {
+    "@repro/asf3": "workspace:*"
+  },
+  "devDependencies": {
+    "nuxt": "^3.10.3"
+  }
+}
