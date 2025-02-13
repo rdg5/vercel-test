@@ -1,6 +1,0 @@
-{
-  "framework": "nuxt",
-  "buildCommand": "bun run build",
-  "installCommand": "bun install",
-  "outputDirectory": "packages/web/.output/public"
-}
