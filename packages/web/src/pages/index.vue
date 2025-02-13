@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Vercel Build Cache Test</h1>
+    <h1>Veercel Build Cache Test</h1>
     <p>{{ timestamp }}</p>
   </div>
 </template>
